@@ -1,0 +1,569 @@
+/* Reset y configuración básica */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #000;
+    color: #fff;
+    min-height: 100vh;
+    background-image: 
+        url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='30' y='35' font-size='24' text-anchor='middle' fill='white' opacity='0.15'%3E💀%3C/text%3E%3C/svg%3E");
+    background-size: 60px 60px;
+    background-repeat: repeat;
+    animation: skullMove 30s ease-in-out infinite;
+}
+
+@keyframes skullMove {
+    0%, 100% { background-position: 0 0; }
+    25% { background-position: 15px 15px; }
+    50% { background-position: 30px 0; }
+    75% { background-position: 15px -15px; }
+}
+
+/* Navegación estilo MySpace */
+.myspace-nav {
+    background: linear-gradient(135deg, #001f3f, #000080);
+    border-bottom: 3px solid #ff1493;
+    padding: 8px 0;
+    box-shadow: 0 4px 10px rgba(255, 20, 147, 0.3);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.myspace-logo {
+    display: flex;
+    align-items: center;
+    padding: 4px 8px;
+}
+
+.myspace-logo-img {
+    height: 32px;
+    width: auto;
+    filter: brightness(1.1);
+    transition: transform 0.3s ease;
+}
+
+.myspace-logo-img:hover {
+    transform: scale(1.05);
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-btn {
+    color: #fff;
+    text-decoration: none;
+    padding: 4px 8px;
+    border: 1px solid #fff;
+    background: rgba(255, 255, 255, 0.1);
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+    background: #ff1493;
+    transform: scale(1.05);
+}
+
+/* Header principal */
+.main-header {
+    text-align: center;
+    padding: 30px 20px;
+    background: linear-gradient(45deg, #ff1493, #000, #ff1493);
+    border-bottom: 5px solid #ff69b4;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-header::before {
+    content: "💀🌹💀🌹💀🌹💀🌹💀🌹";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-size: 24px;
+    opacity: 0.3;
+    animation: scrollingSymbols 15s linear infinite;
+}
+
+@keyframes scrollingSymbols {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.emo-title {
+    font-family: 'Metal Mania', cursive;
+    font-size: 4rem;
+    color: #1a1a1a;
+    text-shadow: 
+        1px 1px 0 #ff1493,
+        2px 2px 0 #000,
+        3px 3px 0 #ff69b4,
+        4px 4px 0 #000,
+        5px 5px 0 #ff1493,
+        6px 6px 0 #000,
+        7px 7px 0 #ff69b4;
+    margin-bottom: 10px;
+    animation: titlePulse 2s ease-in-out infinite alternate;
+    position: relative;
+    z-index: 2;
+    -webkit-text-stroke: 1px #ff1493;
+}
+
+@keyframes titlePulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.05); }
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px #000;
+    position: relative;
+    z-index: 2;
+}
+
+.no-importa {
+    font-size: 1.2rem;
+    color: #ff1493;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+}
+
+/* Layout principal */
+.main-content {
+    display: grid;
+    grid-template-columns: 300px 1fr 250px;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* Sidebar izquierdo */
+.left-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.category-box {
+    background: linear-gradient(135deg, #ff1493, #ff69b4);
+    border: 3px solid #000;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 15px rgba(255, 20, 147, 0.5);
+}
+
+.category-box h3 {
+    margin: 8px 0;
+    font-size: 14px;
+    color: #000;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #fff;
+}
+
+.invader-section {
+    background: linear-gradient(45deg, #8a2be2, #ff1493);
+    border: 3px solid #000;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.invader-character {
+    font-size: 3rem;
+    animation: invaderBounce 1s ease-in-out infinite alternate;
+}
+
+@keyframes invaderBounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+.invader-section h2 {
+    font-family: 'Creepster', cursive;
+    color: #00ff00;
+    text-shadow: 2px 2px 4px #000;
+    margin: 10px 0;
+}
+
+.system-message {
+    margin-top: 15px;
+}
+
+.message-box {
+    background: #c0c0c0;
+    border: 2px solid #808080;
+    border-radius: 5px;
+    padding: 15px;
+    color: #000;
+    font-size: 12px;
+}
+
+.message-box h3 {
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.ok-btn, .cancel-btn {
+    padding: 4px 12px;
+    margin: 5px;
+    border: 1px solid #808080;
+    background: #d0d0d0;
+    color: #000;
+    cursor: pointer;
+    font-size: 11px;
+}
+
+.ok-btn:hover, .cancel-btn:hover {
+    background: #b0b0b0;
+}
+
+.after-party {
+    background: linear-gradient(135deg, #000, #8b0000);
+    border: 3px solid #ff1493;
+    border-radius: 10px;
+    padding: 15px;
+    color: #fff;
+}
+
+.after-party h2 {
+    font-family: 'Metal Mania', cursive;
+    color: #ff1493;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.album-info {
+    font-style: italic;
+    color: #ff69b4;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Contenido central */
+.center-content {
+    background: linear-gradient(135deg, #ff69b4, #ff1493);
+    border: 3px solid #000;
+    border-radius: 15px;
+    padding: 25px;
+    color: #000;
+    box-shadow: 0 0 20px rgba(255, 20, 147, 0.7);
+}
+
+.event-info h2 {
+    font-family: 'Metal Mania', cursive;
+    color: #000;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 4px #fff;
+}
+
+.bring-items {
+    margin-bottom: 25px;
+}
+
+.item {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 8px 12px;
+    margin: 5px 0;
+    border-radius: 8px;
+    border: 2px solid #000;
+    font-weight: bold;
+}
+
+.event-details {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px 0;
+    border: 2px solid #000;
+}
+
+.event-details h3 {
+    color: #000;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.organizers {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.organizers h3 {
+    color: #000;
+    margin-bottom: 10px;
+}
+
+/* Enlaces de Instagram */
+.instagram-link {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 15px;
+    padding: 6px 12px;
+    border: 2px solid #000;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-bottom: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.instagram-link:hover {
+    background: #ff1493;
+    color: #000;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 20, 147, 0.5);
+}
+
+.instagram-link:active {
+    transform: scale(0.98);
+}
+
+/* Sidebar derecho */
+.right-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.action-btn {
+    background: linear-gradient(135deg, #ff1493, #ff69b4);
+    border: 2px solid #000;
+    color: #000;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(255, 20, 147, 0.5);
+}
+
+/* Reproductor de Spotify */
+.spotify-player {
+    background: linear-gradient(135deg, #000, #1a1a1a);
+    border: 4px solid #ff1493;
+    border-radius: 15px;
+    padding: 18px;
+    margin-top: 26px;
+    box-shadow: 0 0 15px rgba(255, 20, 147, 0.4);
+}
+
+.spotify-title {
+    color: #ff1493;
+    font-family: 'Metal Mania', cursive;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    text-shadow: 2px 2px 4px #000;
+    animation: titleGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes titleGlow {
+    0% { text-shadow: 2px 2px 4px #000, 0 0 5px #ff1493; }
+    100% { text-shadow: 2px 2px 4px #000, 0 0 15px #ff1493, 0 0 25px #ff69b4; }
+}
+
+.spotify-player iframe {
+    width: 100%;
+    height: 200px;
+    border: 2px solid #ff69b4;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Grupo de WhatsApp */
+.whatsapp-group {
+    background: linear-gradient(135deg, #128c7e, #075e54);
+    border: 4px solid #ff1493;
+    border-radius: 15px;
+    padding: 18px;
+    margin-top: 20px;
+    box-shadow: 0 0 15px rgba(255, 20, 147, 0.4);
+}
+
+.whatsapp-title {
+    color: #fff;
+    font-family: 'Metal Mania', cursive;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    text-shadow: 2px 2px 4px #000;
+    animation: titleGlow 2s ease-in-out infinite alternate;
+}
+
+.whatsapp-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #25d366, #128c7e);
+    border: 2px solid #fff;
+    border-radius: 25px;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    gap: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-btn:hover {
+    background: linear-gradient(135deg, #ff1493, #ff69b4);
+    border-color: #000;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(255, 20, 147, 0.5);
+}
+
+.whatsapp-icon {
+    font-size: 18px;
+}
+
+.whatsapp-text {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+
+/* Logo Windows XP */
+.xp-logo-container {
+    text-align: center;
+    padding: 4px;
+    margin-top: 10px;
+}
+
+.xp-logo {
+    width: 500px;
+    height: auto;
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.7));
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+}
+
+.xp-logo:hover {
+    transform: scale(1.08);
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.8));
+}
+
+/* Footer de créditos */
+.credits-footer {
+    background: linear-gradient(135deg, #1a1a1a, #000);
+    border-top: 3px solid #ff1493;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.credits-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.credits-content p {
+    color: #fff;
+    font-size: 14px;
+    margin: 0;
+    font-weight: normal;
+}
+
+.github-link {
+    color: #ff1493;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.github-link:hover {
+    background: #ff1493;
+    color: #000;
+    text-shadow: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .emo-title {
+        font-size: 2.5rem;
+    }
+    
+    .nav-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .stats {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
+
+/* Efectos adicionales nostálgicos */
+.blink {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ff1493;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ff69b4;
+} 
